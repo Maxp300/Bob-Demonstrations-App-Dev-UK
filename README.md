@@ -1,6 +1,6 @@
-# BOB AI Demonstrations - App Dev UK
+# BOB Demonstrations - App Dev UK
 
-Welcome to the BOB AI Demonstrations repository for Nationwide App Dev UK team. This repository serves as a central hub for storing and sharing BOB AI demonstrations, custom modes, and implementation examples.
+Welcome to the BOB Demonstrations repository for Nationwide App Dev UK team. This repository serves as a central hub for storing and sharing BOB AI demonstrations, custom modes, and implementation examples.
 
 ## 📚 Repository Structure
 
@@ -10,7 +10,7 @@ This repository is organized into demonstration folders, each containing specifi
 Bob-Demonstrations-App-Dev-UK/
 ├── README.md (this file)
 └── demos/
-    └── nationwide-electrify-gap-analysis/
+    └── NBS-gap-analysis/
         ├── Custom BOB modes
         ├── Gap analysis tools
         ├── Implementation examples
