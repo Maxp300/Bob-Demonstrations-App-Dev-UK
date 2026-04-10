@@ -99,25 +99,11 @@ A specialized mode for analyzing gaps between design documents and implementatio
 
 ## 🤝 Contributing
 
-We encourage team members to contribute:
-
 1. Create a new branch for your content
 2. Add demonstrations under `demo/` or modes under `custom-modes/`
 3. Include clear documentation
 4. Submit a pull request for review
 
-## 📞 Support
-
-For questions or support:
-- Open an issue in this repository
-- Contact the App Dev UK team
-- Refer to specific demo/mode documentation
-
-## 📝 License
-
-Internal use only - Nationwide Building Society App Dev UK team.
-
----
 
 **Last Updated:** April 2026  
-**Maintained by:** Nationwide App Dev UK Team
+**Maintained by:** Max + James App Dev UK Team
