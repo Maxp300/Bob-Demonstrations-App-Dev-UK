@@ -4,31 +4,35 @@ Welcome to the BOB AI Demonstrations repository for Nationwide App Dev UK team. 
 
 ## 📚 Repository Structure
 
-This repository is organized into demonstration folders, each containing specific use cases and examples:
-
 ```
 Bob-Demonstrations-App-Dev-UK/
-├── README.md (this file)
-└── demos/
-    └── nationwide-electrify-gap-analysis/
-        ├── Custom BOB modes
-        ├── Gap analysis tools
-        ├── Implementation examples
-        └── Documentation
+├── README.md (this file - navigation and information)
+├── demo/
+│   └── gap-analysis/          # Gap Analysis demonstration
+│       ├── Implementation examples
+│       ├── Analysis reports
+│       └── Documentation
+└── custom-modes/
+    ├── .bob/                   # BOB configuration
+    └── custom_mode/            # Custom mode definitions
+        └── gap_analysis/       # Gap Analysis custom mode
 ```
 
-## 🎯 Available Demonstrations
+## 🎯 What's Inside
 
-### 1. [Nationwide Electrify Gap Analysis](./demos/nationwide-electrify-gap-analysis/)
+### 📂 demo/
+Contains practical demonstrations of BOB AI capabilities:
+
+#### [Gap Analysis Demo](./demo/gap-analysis/)
 A comprehensive demonstration of using BOB AI for gap analysis between technical design documents and implementation code.
 
 **Features:**
-- Custom BOB mode for gap analysis
 - Automated design document ingestion
 - Implementation validation tools
 - Backend (Java/Spring Boot) examples
 - Frontend (React) examples
 - Infrastructure as Code examples
+- Detailed analysis reports
 
 **Use Cases:**
 - Technical design validation
@@ -36,7 +40,25 @@ A comprehensive demonstration of using BOB AI for gap analysis between technical
 - Architecture compliance checking
 - Documentation generation
 
-[View Demo →](./demos/nationwide-electrify-gap-analysis/)
+[View Demo →](./demo/gap-analysis/)
+
+---
+
+### 🔧 custom-modes/
+Contains custom BOB modes that extend BOB's capabilities:
+
+#### Gap Analysis Mode
+A specialized mode for analyzing gaps between design documents and implementation.
+
+**Location:** `custom-modes/custom_mode/gap_analysis/`
+
+**Features:**
+- Design document ingestion tools
+- Automated gap detection
+- Structured reporting
+- Integration with BOB workflows
+
+[View Custom Mode →](./custom-modes/custom_mode/gap_analysis/)
 
 ---
 
@@ -48,33 +70,40 @@ A comprehensive demonstration of using BOB AI for gap analysis between technical
    cd Bob-Demonstrations-App-Dev-UK
    ```
 
-2. **Browse demonstrations:**
-   Navigate to the `demos/` directory and explore individual demonstration folders.
+2. **Explore demonstrations:**
+   - Browse the `demo/` directory for practical examples
+   - Check `custom-modes/` for BOB mode extensions
 
-3. **Follow demo-specific instructions:**
-   Each demonstration has its own README with setup and usage instructions.
+3. **Follow specific instructions:**
+   Each demonstration and custom mode has its own README with setup and usage instructions.
 
 ## 📖 How to Use This Repository
 
 ### For Team Members
-- Browse available demonstrations to learn BOB AI capabilities
-- Copy and adapt examples for your projects
-- Contribute new demonstrations (see Contributing section)
+- **Learn:** Browse demonstrations to understand BOB AI capabilities
+- **Adapt:** Copy and modify examples for your projects
+- **Extend:** Use custom modes to enhance your BOB workflows
+- **Contribute:** Add new demonstrations and modes (see Contributing section)
 
-### For New Demonstrations
-When adding a new demonstration:
-1. Create a new folder under `demos/`
-2. Include a comprehensive README
-3. Add relevant code examples and documentation
-4. Update this main README with a link to your demo
+### Adding New Content
+
+**New Demonstrations:**
+1. Create a new folder under `demo/`
+2. Include comprehensive README and examples
+3. Update this main README with a link
+
+**New Custom Modes:**
+1. Add to `custom-modes/custom_mode/`
+2. Follow BOB custom mode structure
+3. Document installation and usage
 
 ## 🤝 Contributing
 
-We encourage team members to contribute new demonstrations and improvements:
+We encourage team members to contribute:
 
-1. Create a new branch for your demonstration
-2. Add your demo under the `demos/` directory
-3. Include clear documentation and examples
+1. Create a new branch for your content
+2. Add demonstrations under `demo/` or modes under `custom-modes/`
+3. Include clear documentation
 4. Submit a pull request for review
 
 ## 📞 Support
@@ -82,7 +111,7 @@ We encourage team members to contribute new demonstrations and improvements:
 For questions or support:
 - Open an issue in this repository
 - Contact the App Dev UK team
-- Refer to individual demo documentation
+- Refer to specific demo/mode documentation
 
 ## 📝 License
 
