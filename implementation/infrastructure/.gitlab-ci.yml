@@ -1,0 +1,35 @@
+# GitLab CI/CD Pipeline for Energy Grid Backend
+# DISCREPANCY #4: Missing variables section
+# Design specifies lines 3-8 should define variables
+
+# DISCREPANCY #5: Only 1 stage instead of 2
+# Design specifies 2 stages (build and package), but only build is implemented
+stages:
+  - build
+
+# Build stage - partially implemented
+build-backend:
+  stage: build
+  image: maven:3.8-openjdk-11
+  script:
+    - echo "Building backend services..."
+    - mvn clean package -DskipTests
+  artifacts:
+    paths:
+      - target/*.jar
+    expire_in: 1 hour
+  only:
+    - main
+    - develop
+
+# DISCREPANCY #6: Missing package stage entirely
+# Design specifies lines 26-48 should contain package stage
+# Should include:
+# - Docker image creation for each microservice
+# - Docker Hub login (line 38)
+# - Image push to Docker Hub (lines 40-46)
+
+# DISCREPANCY #7: Missing test stage
+# No testing is performed before build
+
+# Made with Bob

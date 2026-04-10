@@ -1,0 +1,180 @@
+{
+  "mode": {
+    "name": "Gap Analysis",
+    "slug": "gap-analysis",
+    "icon": "🔍",
+    "version": "1.0.0",
+    "description": "Detect discrepancies between design artifacts and implementation",
+    "category": "business_analysis",
+    "enabled": true
+  },
+  "capabilities": {
+    "document_processing": {
+      "pdf": true,
+      "docx": true,
+      "markdown": true,
+      "images": false
+    },
+    "analysis_types": [
+      "database",
+      "security",
+      "architecture",
+      "cicd",
+      "dependencies",
+      "configuration"
+    ],
+    "output_formats": [
+      "markdown",
+      "json",
+      "html",
+      "pdf"
+    ]
+  },
+  "tools": [
+    {
+      "name": "ingest_design_document",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "name": "create_baseline",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "name": "scan_implementation",
+      "enabled": true,
+      "priority": 3
+    },
+    {
+      "name": "detect_discrepancies",
+      "enabled": true,
+      "priority": 4
+    },
+    {
+      "name": "generate_gap_report",
+      "enabled": true,
+      "priority": 5
+    },
+    {
+      "name": "create_remediation_plan",
+      "enabled": true,
+      "priority": 6
+    },
+    {
+      "name": "track_progress",
+      "enabled": true,
+      "priority": 7
+    }
+  ],
+  "settings": {
+    "pdf_processing": {
+      "default_method": "pypdf2",
+      "fallback_method": "docling",
+      "ocr_enabled": false
+    },
+    "baseline_creation": {
+      "auto_categorize": true,
+      "priority_scoring": true,
+      "version_tracking": true
+    },
+    "discrepancy_detection": {
+      "severity_levels": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"],
+      "auto_categorize": true,
+      "confidence_threshold": 0.7,
+      "min_severity": "LOW"
+    },
+    "reporting": {
+      "default_formats": ["markdown", "json"],
+      "include_recommendations": true,
+      "include_traceability": true,
+      "include_metrics": true
+    },
+    "remediation": {
+      "prioritization_method": "severity_impact",
+      "effort_estimation": true,
+      "dependency_tracking": true
+    }
+  },
+  "workflows": {
+    "standard": [
+      "ingest_design_document",
+      "create_baseline",
+      "scan_implementation",
+      "detect_discrepancies",
+      "generate_gap_report",
+      "create_remediation_plan"
+    ],
+    "quick": [
+      "ingest_design_document",
+      "detect_discrepancies",
+      "generate_gap_report"
+    ],
+    "monitoring": [
+      "scan_implementation",
+      "detect_discrepancies",
+      "track_progress"
+    ]
+  },
+  "integrations": {
+    "mcp_servers": {
+      "filesystem": {
+        "required": true,
+        "operations": ["read", "write", "scan"]
+      },
+      "git": {
+        "required": false,
+        "operations": ["history", "diff"]
+      }
+    },
+    "external_tools": {
+      "pypdf2": {
+        "required": true,
+        "version": ">=3.0.0"
+      },
+      "docling": {
+        "required": false,
+        "version": ">=1.0.0"
+      }
+    }
+  },
+  "ui": {
+    "welcome_message": "Welcome to Gap Analysis mode! I'll help you detect discrepancies between design and implementation.",
+    "prompt_suggestions": [
+      "Analyze design document against implementation",
+      "Create baseline from requirements",
+      "Scan implementation for issues",
+      "Generate gap analysis report",
+      "Track remediation progress"
+    ],
+    "quick_actions": [
+      {
+        "label": "📄 Ingest Design Document",
+        "action": "ingest_design_document"
+      },
+      {
+        "label": "📊 Create Baseline",
+        "action": "create_baseline"
+      },
+      {
+        "label": "🔍 Scan Implementation",
+        "action": "scan_implementation"
+      },
+      {
+        "label": "⚠️ Detect Discrepancies",
+        "action": "detect_discrepancies"
+      },
+      {
+        "label": "📈 Generate Report",
+        "action": "generate_gap_report"
+      }
+    ]
+  },
+  "metadata": {
+    "author": "Bob Development Team",
+    "created": "2026-03-03",
+    "last_updated": "2026-03-03",
+    "license": "MIT",
+    "documentation_url": "https://docs.bob.ai/modes/gap-analysis"
+  }
+}
